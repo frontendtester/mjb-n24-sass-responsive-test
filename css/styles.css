@@ -884,6 +884,28 @@ only screen and (                min-resolution: 2dppx) {
   .news-grid-item {
     width: calc(100% / 2 - 10px);
   }
+
+  .notification-cta {
+    width: 100%;
+    padding: 25px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .notification-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-cta-text {
+    margin-bottom: 16px;
+  }
+
+  .notification-cta-button {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 570px) {
