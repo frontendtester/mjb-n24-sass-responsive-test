@@ -124,6 +124,7 @@ img {
 }
 
 .site-header-logo {
+  flex-shrink: 0;
   display: flex;
   padding: 8px 6px;
   margin-right: 35px;
@@ -150,6 +151,10 @@ img {
   list-style: none;
 }
 
+.currency-rates-item {
+  white-space: nowrap;
+}
+
 .currency-rates-item:not(:last-child) {
   margin-right: 25px;
 }
@@ -161,6 +166,7 @@ img {
 
 /* GLOBAL-SEARCH-FORM */
 .global-search-form {
+  margin-left: 25px;
   margin-right: 25px;
 }
 
@@ -881,6 +887,27 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media only screen and (max-width: 1000px) {
+  .site-header-top-container {
+    flex-wrap: wrap;
+  }
+
+  .global-search-form {
+    order: 1;
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .global-search-form-input {
+    width: 100%;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
+  }
+
   .news-grid-item {
     width: calc(100% / 2 - 10px);
   }
@@ -931,6 +958,23 @@ only screen and (                min-resolution: 2dppx) {
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .site-header-top {
+    padding-bottom: 15px;
+  }
+
+  .currency-rates {
+    order: 1;
+    width: 40%;
+    margin-right: 0;
+  }
+
+  .global-search-form {
+    width: 60%;
+    margin-bottom: 15px;
   }
 }
 
