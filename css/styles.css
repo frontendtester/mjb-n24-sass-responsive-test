@@ -125,11 +125,15 @@ img {
 
 .site-header-logo {
   flex-shrink: 0;
-  display: flex;
+  display: block;
   padding: 8px 6px;
   margin-right: 35px;
   border-radius: 7px;
   background-color: #fff;
+}
+
+.site-header-logo-img {
+  display: block;
 }
 
 .site-header-logo:hover {
@@ -209,6 +213,10 @@ img {
 .lang-toggle-link-active {
   background-color: #fff;
   color: #000;
+}
+
+.site-header-toggler {
+  display: none;
 }
 
 
@@ -1019,6 +1027,113 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media only screen and (max-width: 570px) {
+  .site-header-open::before {
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+  }
+
+  .site-header-top {
+    padding-top: 15px;
+  }
+
+  .site-header-top-container {
+    flex-wrap: nowrap;
+  }
+
+  .site-header-logo-img {
+    width: 90px;
+    height: 45px;
+  }
+
+  .currency-rates {
+    display: none;
+  }
+
+  .site-header-open .currency-rates {
+    display: flex;
+    position: absolute;
+    z-index: 51;
+    top: 140px;
+  }
+
+  .global-search-form {
+    display: none;
+  }
+
+  .site-header-open .global-search-form {
+    display: block;
+    position: absolute;
+    top: 80px;
+    z-index: 51;
+    width: calc(100% - 40px);
+    margin: 0;
+  }
+
+  .site-header-open .global-search-form-input {
+    border: 1px solid #000;
+  }
+
+  .lang-toggle {
+    display: none;
+  }
+
+  .site-header-open .lang-toggle {
+    display: flex;
+    position: absolute;
+    z-index: 51;
+  }
+
+  .site-header-auth-button {
+    margin-left: auto;
+  }
+
+  .site-header-toggler {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .site-header-open .site-header-toggler {
+    position: absolute;
+    right: 20px;
+    z-index: 51;
+  }
+
+  .sitenav {
+    display: none;
+  }
+
+  .site-header-open .sitenav {
+    display: block;
+    position: absolute;
+    z-index: 51;
+    top: 170px;
+    width: calc(100% - 40px);
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .site-header-open .sitenav-item {
+    width: 50%;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+
+  .site-header-open .sitenav-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .site-header-open .sitenav-link {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
   .news-grid {
     margin-left: 0;
   }
@@ -1053,5 +1168,13 @@ only screen and (                min-resolution: 2dppx) {
 
   .site-footer-links:not(:last-child) {
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .site-header-open .sitenav-item {
+    width: 100%;
+    padding-right: 0;
+    text-align: right;
   }
 }

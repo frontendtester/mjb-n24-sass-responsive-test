@@ -25,7 +25,10 @@
       <div class="site-header-top-container container">
         <!-- SITE-HEADER-LOGO -->
         <a class="site-header-logo" href="index.html">
-          <img class="site-header-logo-img" src="img/logo-purple.svg" alt="N24 logo" width="264" height="28">
+          <picture>
+            <source srcset="https://picsum.photos/id/870/90/45" media="(max-width:570px)">
+            <img class="site-header-logo-img" src="img/logo-purple.svg" alt="N24 logo" width="264" height="28">
+          </picture>
         </a>
 
         <!-- CURRENCY-RATES -->
@@ -52,7 +55,9 @@
         </div>
 
         <!-- SITE-HEADER-AUTH -->
-        <a class="button button-primary" href="#">Войти</a>
+        <a class="site-header-auth-button button button-primary" href="#">Войти</a>
+
+        <button class="site-header-toggler js-site-header-toggler" type="button">Menyu</button>
       </div>
     </div>
 
