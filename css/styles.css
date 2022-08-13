@@ -872,3 +872,27 @@ only screen and (                min-resolution: 2dppx) {
     background-image: url("../img/global-notifications-bg@2x.jpg");
   }
 }
+
+
+@media only screen and (max-width: 1240px) {
+  .news-grid-item {
+    width: calc(100% / 3 - 10px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .news-grid-item {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .news-grid {
+    margin-left: 0;
+  }
+
+  .news-grid-item {
+    width: 100%;
+    margin-left: 0;
+  }
+}
