@@ -891,9 +891,33 @@ only screen and (                min-resolution: 2dppx) {
     margin-left: 0;
     margin-right: 0;
   }
+
+  .articla-card-horizontal-img {
+    width: 170px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
+  .layout-2-1 {
+    display: block;
+  }
+
+  .layout-2-1-main {
+    width: 100%;
+  }
+
+  .layout-2-1-sidebar {
+    width: 100%;
+  }
+
+  .articla-card-horizontal-img {
+    width: 210px;
+  }
+
+  .sidebar-ad-img {
+    width: 100%;
+  }
+
   .modal-dialog {
     width: auto;
     margin-left: 20px;
@@ -913,6 +937,16 @@ only screen and (                min-resolution: 2dppx) {
 
   .notification-cta-button {
     width: 100%;
+  }
+
+  .article-card-horizontal {
+    flex-direction: column;
+  }
+
+  .articla-card-horizontal-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
   }
 
   .modal-lead {
