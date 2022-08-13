@@ -893,6 +893,14 @@ only screen and (                min-resolution: 2dppx) {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .modal-dialog {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .notification-cta {
     flex-direction: column;
@@ -905,6 +913,11 @@ only screen and (                min-resolution: 2dppx) {
 
   .notification-cta-button {
     width: 100%;
+  }
+
+  .modal-lead {
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
 
